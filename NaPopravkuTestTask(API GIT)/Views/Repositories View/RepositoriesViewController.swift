@@ -21,6 +21,8 @@ class RepositoriesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        settingNavigationBar()
+        
         repositoriesViewModelController.fetchRepository{ [weak self] repositories in
             DispatchQueue.main.async {
                 self?.updateUI()
@@ -38,6 +40,10 @@ class RepositoriesViewController: UIViewController {
     
     func updateUI() {
         tableView.reloadData()
+    }
+    
+    func settingNavigationBar() {
+        navigationController?.navigationBar.topItem?.title = "List"
     }
 }
 

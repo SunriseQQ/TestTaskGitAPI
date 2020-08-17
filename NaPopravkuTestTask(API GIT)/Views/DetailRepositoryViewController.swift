@@ -36,7 +36,7 @@ class DetailRepositoryViewController: UIViewController {
         commitDate.text =  ("Updated: \(detailRepositoryViewModelController.viewModel().date)")
         commitAuthor.text = detailRepositoryViewModelController.viewModel().nameAuthorCommit
         commitMessage.text = ("Last commit: \(detailRepositoryViewModelController.viewModel().message)")
-        commitParents.text = ("Parents: \n \(detailRepositoryViewModelController.viewModel().parents.joined(separator: "\n"))")
+        commitParents.text = ("Parents:\n \(detailRepositoryViewModelController.viewModel().parents.joined(separator: "\n "))")
         
         commitDate.font = .systemFont(ofSize: 13)
         commitAuthor.font = .boldSystemFont(ofSize: 15)
